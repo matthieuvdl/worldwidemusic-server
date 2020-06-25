@@ -79,6 +79,7 @@ app.get('/getalbumworld',(req,res) => {
 })
 
 
-app.listen(80,() => {
-    console.log('Server listening on port 80')
-})
+const PORT = process.env.PORT || 4000;
+app.listen(PORT, () => {
+    console.log(`Our app is running on port ${ PORT }`);
+});
